@@ -26,8 +26,8 @@ public class BaseModel {
         this.createdDate = createdDate;
     }
 
-    public LocalDateTime getUpdatedDate() {
-        return updatedDate;
+    public LocalDateTime getUpdatedDate(LocalDateTime updatedDate) {
+        return this.updatedDate;
     }
 
     public void setUpdatedDate(LocalDateTime updatedDate) {

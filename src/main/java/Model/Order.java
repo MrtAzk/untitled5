@@ -2,6 +2,7 @@ package Model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Order extends  BaseModel {
 
@@ -10,6 +11,12 @@ public class Order extends  BaseModel {
     private BigDecimal totalAmount ;
 
     private LocalDateTime orderDate ;
+
+    private List<Product> products;
+
+    public Order() {
+        this.orderDate=LocalDateTime.now();
+    }
 
     public Order(Customer customer) {
         this.customer = customer;
@@ -39,5 +46,13 @@ public class Order extends  BaseModel {
 
     public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

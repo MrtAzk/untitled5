@@ -8,7 +8,7 @@ public class Customer  extends BaseModel{
 
     private  String email ;
 
-    private  String password ; // TODO haslenecek şifreleme ile
+    private  String password ; //
 
     public Customer() {
 
@@ -43,4 +43,14 @@ public class Customer  extends BaseModel{
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return
+                "ID=" + getId() +
+                ", Name='" + getName() + '\'' +
+                ", Email='" + getEmail() + '\''
+                ;
+    }
+
 }
